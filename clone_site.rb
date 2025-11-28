@@ -11,8 +11,12 @@ class CloneSite
     @base_output_dir = "sites"
     FileUtils.mkdir_p(@base_output_dir)
     
-    # Define o diretório específico deste clone dentro da pasta sites
-    @output_dir = File.join(@base_output_dir, "cloned_site_#{Time.now.to_i}")
+    # Extrair o nome do domínio para usar na pasta (ex: google.com)
+    domain = @base_uri.host.gsub(/^www\./, '')
+    timestamp = Time.now.to_i
+    
+    # Define o diretório específico: sites/google.com_1234567890
+    @output_dir = File.join(@base_output_dir, "#{domain}_#{timestamp}")
   end
 
   def clone

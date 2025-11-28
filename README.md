@@ -44,11 +44,11 @@ ruby clone_site.rb https://meublog.com
 
 ## 📁 Estrutura de saída
 
-O script cria uma pasta `sites/` e organiza cada clonagem lá dentro:
+O script cria uma pasta `sites/` e organiza cada clonagem lá dentro, usando o **nome do domínio** para facilitar a identificação:
 
 ```
 sites/
-└── cloned_site_1234567890/
+└── wikipedia.org_1234567890/
     ├── index.html          # HTML principal
     ├── css/                # Arquivos CSS
     │   ├── style_0.css

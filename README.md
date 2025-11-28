@@ -20,45 +20,46 @@ gem install nokogiri
 
 ## 🚀 Como usar
 
-### Uso básico (clona example.com):
+### Uso básico:
 
 ```bash
-ruby clone_site.rb
+ruby src/clone_site.rb
 ```
 
 ### Clonar um site específico:
 
 ```bash
-ruby clone_site.rb https://www.seusite.com
+ruby src/clone_site.rb https://www.seusite.com
 ```
 
-### Exemplos:
+## 📖 Documentação Completa
 
-```bash
-# Clonar o site da Wikipedia
-ruby clone_site.rb https://pt.wikipedia.org
+- **[docs/QUICKSTART.md](docs/QUICKSTART.md)** - Início rápido em 3 passos
+- **[docs/INSTALACAO.md](docs/INSTALACAO.md)** - Guia detalhado de instalação
+- **[docs/README.md](docs/README.md)** - Visão geral e funcionalidades
+- **[docs/EXEMPLOS.md](docs/EXEMPLOS.md)** - Exemplos práticos de uso
+- **[docs/COMO_FUNCIONA.md](docs/COMO_FUNCIONA.md)** - Arquitetura interna
 
-# Clonar um blog
-ruby clone_site.rb https://meublog.com
-```
-
-## 📁 Estrutura de saída
-
-O script cria uma pasta `sites/` e organiza cada clonagem lá dentro, usando o **nome do domínio** para facilitar a identificação:
+## 📁 Estrutura do Projeto
 
 ```
-sites/
-└── wikipedia.org_1234567890/
-    ├── index.html          # HTML principal
-    ├── css/                # Arquivos CSS
-    │   ├── style_0.css
-    │   └── style_1.css
-    ├── js/                 # Arquivos JavaScript
-    │   ├── script_0.js
-    │   └── script_1.js
-    └── images/             # Imagens
-        ├── image_0.jpg
-        └── image_1.png
+CL-SIT/
+│
+├── 📂 src/                   # Código fonte
+│   ├── clone_site.rb         # Script principal
+│   └── config.example.rb     # Configurações
+│
+├── 📂 docs/                  # Documentação
+│   ├── QUICKSTART.md
+│   ├── INSTALACAO.md
+│   └── ...
+│
+├── 📂 sites/                 # Sites clonados (Output)
+│
+├── 📂 agent_setup/           # Configuração do Agent AI
+│
+├── README.md                 # Este arquivo
+└── LICENSE                   # Licença
 ```
 
 ## ✨ Funcionalidades
